@@ -25,7 +25,26 @@ public class Scanner {
 	}
 	
 	public int getScore(){
-		return 
+		return 0;
 	}
+	
+	public ArrayList<Integer> getStudentAnswers(PImage p) {
+		p.loadPixels();
+		for (int y = 223; y < 900; y = y + 49) {
+			for (int x = 222; x < 555; x = x + 71) {
+				if(isBlack(x,y))
+			}
+		}
+	}
+		
+	public boolean isBlack(int x,int y){
+		for(int i=x-10; i<x+10; i++ ){
+			for(int  j=y-10; j< y+10; j++){
+				if()
+			}
+		}
+	}
+	
 
 }
+

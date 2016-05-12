@@ -3,4 +3,8 @@ Development Log
 Day 1: 5/12/16
 - Added a development log
 - Wrote the numRight method
-- 
+- Attempted getStudentAnswers method and isBlack method
+
+To Do Tomorrow
+- Finish getStudentAnswers
+- Finish isBlack method
