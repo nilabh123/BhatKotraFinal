@@ -8,3 +8,14 @@ Day 1: 5/12/16
 To Do Tomorrow
 - Finish getStudentAnswers
 - Finish isBlack method
+
+Day 3: 5/17/16
+- Finished getStudentsAnswers
+- Finished Blackness method
+- Implemented Tester class into project
+- Created Implement class and implemented the methods
+
+
+To Do Tommorow
+- Get tester class to work( esp. the display)
+
