@@ -14,11 +14,11 @@ public class Scanner {
 	}
 
 	
-	public int numRight(int[] answers, int[] student){
+	public int numRight(ArrayList<Integer> answers, ArrayList<Integer> student){
 		int sum=0;
-		if(answers.length==student.length){
-			for(int i=0; i< answers.length; i++){
-				if(answers[i]==student[i]) sum++;
+		if(answers.size()==student.size()){
+			for(int i=0; i< answers.size(); i++){
+				if(answers.get(i)==student.get(i)) sum++;
 			}
 		}
 		
@@ -26,11 +26,14 @@ public class Scanner {
 	}
 	
 	public int getScore(){
-		return 0;
+		ArrayList<Integer> answers = getAnswers(key);
+		ArrayList<Integer> testtaker = getAnswers(student);
+		int score = numRight(answers, testtaker);
+		return score;
 	}
 	
 	public ArrayList<Integer> getAnswers(int[] pic) {
-		ArrayList<Integer> a = new ArrayList<Integer>;
+		ArrayList<Integer> a = new ArrayList<Integer>();
 		for (int y = 223; y < 900; y = y + 49) {
 			int max = Integer.MIN_VALUE;
 			int count=0;
@@ -44,6 +47,7 @@ public class Scanner {
 			}
 			a.add(maxcount);
 		}
+		return a;
 	}
 		
 	public int Blackness(int x,int y, int[] image){
