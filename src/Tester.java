@@ -22,7 +22,8 @@ public class Tester extends PApplet {
 
 	public void setup() {
 		size(600, 600);
-		getPImagesFromPdf("d:/workspace/OmrFiles/omrtest.pdf", images);
+		images = new ArrayList<PImage>();
+		getPImagesFromPdf("D:/workspace/OmrFiles/omrtest.pdf", images);
 
 	}
 
