@@ -39,11 +39,11 @@ public class Scanner {
 	
 	public ArrayList<Integer> getAnswers(int[] pic) {
 		ArrayList<Integer> a = new ArrayList<Integer>();
-		for (int y = 223; y < 900; y = y + 49) {
+		for (int y = 223; y < 900; y = y+ 24) {
 			int max = Integer.MIN_VALUE;
 			int count=0;
 			int maxcount=0;
-			for (int x = 222; x < 555; x = x + 71) {
+			for (int x = 222; x < 555; x = x + 20) {
 				count++;
 				if(Blackness(x,y,pic)>max){ 
 					maxcount =count; 

@@ -19,3 +19,8 @@ Day 3: 5/17/16
 To Do Tommorow
 - Get tester class to work( esp. the display)
 
+Day 4: 5/19/16
+- Got Implement class to work and run successfully without any bugs
+
+To Do Tomorrow
+- Find a way to convert the images to pixel values and successfully read the scantron.
