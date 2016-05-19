@@ -1,11 +1,17 @@
+import java.util.ArrayList;
+
+import processing.core.PImage;
 
 public class Implement {
 	public static void main(String[] args){
+		ArrayList<PImage> images1 = new ArrayList<PImage>();
+		
 		Tester t= new Tester();
-		t.images.get(0).loadPixels();
-		for(int i=1; i<t.images.size(); i++){
-			t.images.get(i).loadPixels();
-			Scanner s = new Scanner(t.images.get(0).pixels,t.images.get(i).pixels );
+		t.getPImagesFromPdf("D:/workspace/OmrFiles/omrtest.pdf", images1);
+		images1.get(0).loadPixels();
+		for(int i=1; i<images1.size(); i++){
+			images1.get(i).loadPixels();
+			Scanner s = new Scanner(images1.get(0).pixels,images1.get(i).pixels );
 			System.out.println(s.getScore());
 		}
 	}
