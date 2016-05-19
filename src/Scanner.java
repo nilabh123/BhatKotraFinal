@@ -25,6 +25,11 @@ public class Scanner {
 		return sum;
 	}
 	
+	public int getTotalQuestions() {
+		ArrayList<Integer> answers = getAnswers(key);
+		return answers.size();
+	}
+	
 	public int getScore(){
 		ArrayList<Integer> answers = getAnswers(key);
 		ArrayList<Integer> testtaker = getAnswers(student);
