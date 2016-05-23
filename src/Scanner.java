@@ -39,6 +39,7 @@ public class Scanner {
 	
 	public ArrayList<Integer> getAnswers(int[] pic) {
 		ArrayList<Integer> a = new ArrayList<Integer>();
+
 		for (int y = 223; y < 900; y = y+ 24) {
 			int max = Integer.MIN_VALUE;
 			int count=0;
@@ -62,7 +63,7 @@ public class Scanner {
 				sum+=image[(i*scantron_length) + j];
 			}
 		}
-		return sum/400;
+		return sum / 400;
 	}
 	
 	
