@@ -8,7 +8,8 @@ public class Implement {
 		
 		Tester t= new Tester();
 		t.getPImagesFromPdf("D:/workspace/OmrFiles/omrtest.pdf", images1);
-		images1.get(0).loadPixels();
+		images1.get(0).save("D:/workspace/key.png");
+		
 		for(int i=1; i<images1.size(); i++){
 			images1.get(i).loadPixels();
 			Scanner s = new Scanner(images1.get(0).pixels,images1.get(i).pixels );
@@ -16,5 +17,4 @@ public class Implement {
 			System.out.println(s.getTotalQuestions());
 		}
 	}
-
 }
