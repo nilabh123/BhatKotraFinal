@@ -26,7 +26,15 @@ To Do Tomorrow
 - Find a way to convert the images to pixel values and successfully read the scantron.
 
 Day 5: 5/23/16
-- 
+- Attempted to read the scantron answers
+- Read only 29 out of the possible 100 questions
 
 To Do Tomorrow
-- 
+- Figure out how to read all the answers
+
+Day 6: 5/24/16
+- Tried to read all the answers (Read 82/100 maximum)
+- Started the Tutorial/Overview Part
+
+To Do Tomorrow
+- Finish our turn in part.
