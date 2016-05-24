@@ -8,7 +8,7 @@ public class Implement {
 		
 		Tester t= new Tester();
 		t.getPImagesFromPdf("D:/workspace/OmrFiles/omrtest.pdf", images1);
-		images1.get(0).save("D:/workspace/key.png");
+		images1.get(0).loadPixels();
 		
 		for(int i=1; i<images1.size(); i++){
 			images1.get(i).loadPixels();

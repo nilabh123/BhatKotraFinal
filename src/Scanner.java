@@ -11,6 +11,7 @@ public class Scanner {
 	public Scanner(int[] key, int[] student){
 		this.key = key;
 		this.student = student;
+		scantron_length= 1224;
 	}
 
 	
@@ -40,11 +41,11 @@ public class Scanner {
 	public ArrayList<Integer> getAnswers(int[] pic) {
 		ArrayList<Integer> a = new ArrayList<Integer>();
 
-		for (int y = 223; y < 900; y = y+ 24) {
+		for (int y = 479; y < 1388; y = y+ 40) {
 			int max = Integer.MIN_VALUE;
 			int count=0;
 			int maxcount=0;
-			for (int x = 222; x < 555; x = x + 20) {
+			for (int x = 134; x <=294; x = x + 40) {
 				count++;
 				if(Blackness(x,y,pic)>max){ 
 					maxcount =count; 
@@ -53,17 +54,62 @@ public class Scanner {
 			}
 			a.add(maxcount);
 		}
+		
+		for (int y = 479; y < 1388; y = y+ 35) {
+			int max = Integer.MIN_VALUE;
+			int count=0;
+			int maxcount=0;
+			for (int x = 420; x <=580; x = x + 35) {
+				count++;
+				if(Blackness(x,y,pic)>max){ 
+					maxcount =count; 
+					max = Blackness(x,y,pic);
+				}
+			}
+			a.add(maxcount);
+		}
+		
+		
+		
+		for (int y = 479; y < 1388; y = y+ 35) {
+			int max = Integer.MIN_VALUE;
+			int count=0;
+			int maxcount=0;
+			for (int x = 700; x <=860; x = x + 35) {
+				count++;
+				if(Blackness(x,y,pic)>max){ 
+					maxcount =count; 
+					max = Blackness(x,y,pic);
+				}
+			}
+			a.add(maxcount);
+		}
+		
+		for (int y = 479; y < 1388; y = y+ 35) {
+			int max = Integer.MIN_VALUE;
+			int count=0;
+			int maxcount=0;
+			for (int x = 980; x <=1140; x = x + 35) {
+				count++;
+				if(Blackness(x,y,pic)>max){ 
+					maxcount =count; 
+					max = Blackness(x,y,pic);
+				}
+			}
+			a.add(maxcount);
+			
+		}
 		return a;
 	}
 		
 	public int Blackness(int x,int y, int[] image){
 		int sum=0;
-		for(int i=x-10; i<x+10; i++ ){
-			for(int  j=y-10; j< y+10; j++){
+		for(int i=x-2; i<=x+2; i++ ){
+			for(int  j=y-2; j<= y+2; j++){
 				sum+=image[(i*scantron_length) + j];
 			}
 		}
-		return sum / 400;
+		return sum / 25;
 	}
 	
 	
