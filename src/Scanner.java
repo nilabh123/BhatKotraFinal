@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import processing.core.PImage;
 
 public class Scanner {
-
 	int[] student;
 	int[] key;
 	int scantron_length;
@@ -13,7 +12,7 @@ public class Scanner {
 		this.student = student;
 		scantron_length = 1224;
 	}
-
+	//Compares student's answers with the answers in the key and tells how many the student got right
 	public int numRight(ArrayList<Integer> answers, ArrayList<Integer> student) {
 		int sum = 0;
 		if (answers.size() == student.size()) {
@@ -25,19 +24,19 @@ public class Scanner {
 
 		return sum;
 	}
-
+	//returns total number of questions in test
 	public int getTotalQuestions() {
 		ArrayList<Integer> answers = getAnswers(key);
 		return answers.size();
 	}
-
+	//returns score of student
 	public int getScore() {
 		ArrayList<Integer> answers = getAnswers(key);
 		ArrayList<Integer> testtaker = getAnswers(student);
 		int score = numRight(answers, testtaker);
 		return score;
 	}
-
+	//returns the answers bubbled into the scantron when a pixel array of the scantron is inputted
 	public ArrayList<Integer> getAnswers(int[] pic) {
 		ArrayList<Integer> a = new ArrayList<Integer>();
 
@@ -100,13 +99,12 @@ public class Scanner {
 		}
 		return a;
 	}
-
+	//gives a measure of how black the surrounding area of a certain pixel is 
 	public int Blackness(int x, int y, int[] image) {
 		int sum = 0;
-		for (int i = x - 2; i <= x + 2; i++) {
-			for (int j = y - 2; j <= y + 2; j++) {
+		for (int i = x - 4; i <= x + 4 ; i++) {
+			for (int j = y - 4; j <= y + 4; j++) {
 				sum += image[(i * scantron_length) + j];
-				System.out.println(image[(i * scantron_length) + j]);
 			}
 		}
 

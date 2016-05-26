@@ -23,7 +23,7 @@ public class Tester extends PApplet {
 	public void setup() {
 		size(600, 600);
 		images = new ArrayList<PImage>();
-		getPImagesFromPdf("D:/workspace/OmrFiles/omrtest.pdf", images);
+		getPImagesFromPdf("assets/omrtest.pdf", images);
 
 	}
 
@@ -58,17 +58,22 @@ public class Tester extends PApplet {
 
 		for (PDPage page : pages) {
 			try {
-				BufferedImage image = page.convertToImage();
-
+				BufferedImage image = null;
+				
+				image = page.convertToImage();
+				
 				PImage img = new PImage(image.getWidth(), image.getHeight(),
 						PConstants.ARGB);
+				img.loadPixels();
+				
 				image.getRGB(0, 0, img.width, img.height, img.pixels, 0,
 						img.width);
+				
 				img.updatePixels();
 
 				images.add(img);
 				System.out.println("Adding page " + images.size());
-			} catch (IOException e) {
+			} catch (Exception e) {
 				System.out.println("problem converting to image");
 				e.printStackTrace();
 			}
