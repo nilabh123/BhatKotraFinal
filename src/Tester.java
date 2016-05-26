@@ -23,7 +23,7 @@ public class Tester extends PApplet {
 	public void setup() {
 		size(600, 600);
 		images = new ArrayList<PImage>();
-		getPImagesFromPdf("assets/omrtest.pdf", images);
+		getPImagesFromPdf("../assets/omrtest.pdf", images);
 
 	}
 
